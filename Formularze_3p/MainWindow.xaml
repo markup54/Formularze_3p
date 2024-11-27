@@ -1,0 +1,63 @@
+﻿<Window x:Class="Formularze_3p.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Formularze_3p"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <TabControl>
+        <TabItem Header="Kalkulator Walut">
+            <StackPanel>
+                <TextBlock>Ile waluty</TextBlock>
+                <TextBox x:Name="waluta_textbox">
+
+                </TextBox>
+                <TextBlock>Wybierz walutę
+                </TextBlock>
+                <RadioButton
+                    GroupName="waluta_radio"
+                    x:Name="euro_radio"
+                    IsChecked="True"
+                    >EURO</RadioButton>
+                <RadioButton
+                    GroupName="waluta_radio"
+                    x:Name="frank_radio"
+                    
+                    >FRANK</RadioButton>
+                <RadioButton
+                    GroupName="waluta_radio"
+                    x:Name="dolar_radio"
+                 
+                    >Dolar</RadioButton>
+
+                <Button Click="Button_Click">Przelicz walutę</Button>
+            </StackPanel>
+        </TabItem>
+        <TabItem Header="Kalkulator temperatur">
+            
+        </TabItem>
+        <TabItem Header="Obliczanie pola i obwodu
+                 ">
+            <StackPanel>
+                <TextBlock>Podaj liczbę</TextBlock>
+                <TextBox x:Name="bok_textbox"></TextBox>
+                <TextBlock>Wybierz figurę</TextBlock>
+                <ComboBox x:Name="figura_combobox" 
+                  SelectedIndex="0">
+                    <ComboBoxItem>Kwadrat</ComboBoxItem>
+                    <ComboBoxItem>Trójkąt</ComboBoxItem>
+                    <ComboBoxItem>Pięciokat</ComboBoxItem>
+                </ComboBox>
+                <TextBlock>Wybierz co obliczyć</TextBlock>
+                <CheckBox
+                    x:Name="poleCheckBox"
+                    >pole</CheckBox>
+                <CheckBox 
+                    x:Name="obwodCheckBox"
+                    >obwód</CheckBox>
+                <Button Click="Button_Click_1">Oblicz</Button>
+            </StackPanel>
+        </TabItem>
+    </TabControl>
+</Window>
